@@ -1,6 +1,9 @@
 const express = require ('express');
 const exphbs = require('express-handlebars');
 
+const team = require('./team.json');
+const clients = require('./clients.json');
+
 const app = express();
 const port = 8888;
 
@@ -17,8 +20,13 @@ app.engine('hbs', exphbs({
 );
 
 app.get('/',(req, res) => {
-    res.render('home');
+    res.render('home',{pageTitle:'WebStudio', team, clients});
 })
 app.get('/portfolio',(req, res) => {
-    res.render('portfolio');
+    res.render('portfolio', {pageTitle:'Portfolio'});
+})
+app.get('/person-card/:personId', (req, res) => {
+    console.log(req.params);
+    const person = team.find(p => p.id === req.params.personId);
+    res.render('person-card', {person});
 })

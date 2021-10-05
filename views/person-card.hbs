@@ -1,0 +1,34 @@
+<div style="display:flex; flex-direction: column; align-items: center;">
+    <picture>
+      <source 
+        srcset="{{person.srcDesktopWebp}}"
+        type = "image/webp"
+        media="(min-width: 1200px)">
+      <source 
+        srcset="{{person.srcDesktopJpg}}"
+        media="(min-width: 1200px)">
+      <source
+        srcset="{{person.srcTabletWebp}}"
+        type="image/webp"
+        media="(min-width: 768px)">
+      <source
+        srcset="{{person.srcTabletJpg}}"
+        media="(min-width: 768px)">
+      <source 
+        srcset="{{person.srcMobileWebp}}"
+        type="image/webp"
+        media="(min-width: 480px)">
+      <source
+      srcset="{{person.srcMobileJpg}}"
+        media="(min-width: 480px)">
+      <img 
+        src="{{person.src}}"
+        alt="{{person.alt}}">
+    </picture>
+    <div style="display:flex; flex-direction: column; align-items: center;">
+      <h3 >{{person.name}}</h3>
+      <p>{{person.position}}</p>
+    </div>
+    
+</div>
+<a  style="display:flex; flex-direction: column; align-items: center;" href="/">Back</a>

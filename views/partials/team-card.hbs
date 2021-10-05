@@ -1,0 +1,65 @@
+<li class="team__card">
+<a href="/person-card/{{id}}">
+    <picture>
+      <source 
+        srcset="{{srcDesktopWebp}}"
+        type = "image/webp"
+        media="(min-width: 1200px)">
+      <source 
+        srcset="{{srcDesktopJpg}}"
+        media="(min-width: 1200px)">
+      <source
+        srcset="{{srcTabletWebp}}"
+        type="image/webp"
+        media="(min-width: 768px)">
+      <source
+        srcset="{{srcTabletJpg}}"
+        media="(min-width: 768px)">
+      <source 
+        srcset="{{srcMobileWebp}}"
+        type="image/webp"
+        media="(min-width: 480px)">
+      <source
+      srcset="{{srcMobileJpg}}"
+        media="(min-width: 480px)">
+      <img class="team__img"
+        src="{{src}}"
+        alt="{{alt}}">
+    </picture>
+</a>
+    <div class="team__box">
+      <h3 class="team__title">{{name}}</h3>
+      <p class="team__description">{{position}}</p>
+      <ul class="social pointkiller">
+        <li class="social__item">
+          <a href="{{instagram}}" class="social__link" >
+            <svg width="20" height="20">
+              <use href=./images/icons.svg#icon-instagram></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="{{twitter}}" class="social__link">
+            <svg width="20" height="20">
+              <use href=./images/icons.svg#icon-twitter></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="{{facebook}}" class="social__link">
+            <svg width="20" height="20">
+              <use href=./images/icons.svg#icon-facebook></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="{{linkedin}}" class="social__link">
+            <svg width="20" height="20">
+              <use href=./images/icons.svg#icon-linkedin></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+</li>
+
